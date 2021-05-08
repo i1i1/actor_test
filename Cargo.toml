@@ -1,0 +1,21 @@
+[package]
+name = "actor_test"
+version = "0.1.0"
+authors = ["taisei"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix = "0.11"
+futures = "0.3"
+criterion = { version = "0.3.4", features = ["async_tokio"]}
+async-trait = "0.1"
+xtra = { version = "0.5", features = ["with-tokio-1"] }
+tokio = { version = "1", features = ["full"] }
+async-std = { version = "=1.6.2" }
+iroha_actor = { git = "https://github.com/i1i1/iroha", branch = "actor" }
+
+[[bench]]
+name = "bench"
+harness = false
